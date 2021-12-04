@@ -1,0 +1,14 @@
+<li>
+  <img src="{{imgFigure}}" alt="">
+  <section>
+    <header>
+      <div class="div-vote-average">{{vote_average * 10}}%</div>
+      <h2>{{title}}</h2>
+    </header>
+    <div class="container-overview">
+      <time datetime="05-03-2021">{{release_date}}</time>
+      <p>{{overview}}</p>
+      <app-genres [listGenres]="genres"></app-genres>
+    </div>
+  </section>
+</li>

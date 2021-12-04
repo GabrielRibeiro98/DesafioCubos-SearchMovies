@@ -1,8 +1,16 @@
+import { SearchService } from 'src/app/shared/components/search/search.service';
+import { SearchModule } from './shared/components/search/search.module';
+import { TopBarModule } from './shared/components/topbar/topbar.module';
+import { CardMovieModule } from './shared/components/card-movie/card-movie.module';
+import { PaginateModule } from './shared/components/paginate/paginate.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ListMovieModule } from './pages/list-movie/list-movie.module';
+import { HttpClientModule } from '@angular/common/http';
+import { GenresModule } from './shared/components/genres/genres.module';
 
 @NgModule({
   declarations: [
@@ -10,9 +18,16 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PaginateModule,
+    CardMovieModule,
+    ListMovieModule,
+    TopBarModule,
+    HttpClientModule,
+    GenresModule,
+    SearchModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

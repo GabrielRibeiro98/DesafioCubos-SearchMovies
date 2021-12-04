@@ -1,0 +1,37 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  padding: 0px;
+}
+
+.container-input {
+  width: 100%;
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-device-width: 1000px) {
+  nav {
+    width: 900px;
+  }
+}
+
+@media only screen and (max-device-width: 999px) {
+  nav {
+    width: 80%;
+  }
+}

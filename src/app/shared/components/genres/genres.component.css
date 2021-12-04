@@ -1,0 +1,14 @@
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0px;
+}
+
+li {
+  margin-right: 10px;
+  color: #116193;
+  padding: 5px 20px;
+  background: #ffffff;
+  border-radius: 25px;
+  border: 1.5px solid #116193;
+}
