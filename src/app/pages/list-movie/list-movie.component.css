@@ -26,7 +26,8 @@ footer {
 
 @media only screen and (min-device-width: 1000px) {
   nav {
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
   }
 }
 

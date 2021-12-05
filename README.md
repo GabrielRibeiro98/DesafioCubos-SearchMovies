@@ -1,27 +1,11 @@
-# DesafioCubos
+# instruções para a compilação/execução do web app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+Após clonar o web app, vá no terminal e de um 'npm install' para baixar suas dependências
 
-## Development server
+Para executar o web app, basta dar um 'ng serve' no terminal e abrir o localhost.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para a busca de filmes basta inserir parte do titulo do filme ou alguma gênero o qual o filme faz parte e apertar a tecla Enter.
 
-## Code scaffolding
+A paginação basta apenas clicar no número para ser redirecionado.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para ver mais informações de um determinado filme, basta clica sobre o seu bloco.

@@ -24,8 +24,12 @@ export class ListMovieComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.networkService.get(BASE_URL, `genre/movie/list?api_key=${API_KEY}&${LANGUAGE}`).subscribe((value: any) => {
+    this.networkService.get(BASE_URL, `search/movie?api_key=${API_KEY}&${LANGUAGE}&query=''`).subscribe((list: any) => {
+      this.movies = list.results;
+      this.networkService.get(BASE_URL, `genre/movie/list?api_key=${API_KEY}&${LANGUAGE}`).subscribe((value: any) => {
         this.genresService.listGenresId.next(value.genres);
+        this.paginate();
+      })
     })
   }
 
@@ -55,7 +59,6 @@ export class ListMovieComponent implements OnInit {
       sliceIndex = sliceIndex + 5;
       controllerIndexArray++;
     };
-   console.log(this.moviesPaginate)
   }
 
   indexArrayPaginate(index) {
@@ -63,6 +66,3 @@ export class ListMovieComponent implements OnInit {
   }
 
 }
-/*
-this.moviesPaginate[controllerIndexArray] = this.movies.slice(0, 5);
-*/

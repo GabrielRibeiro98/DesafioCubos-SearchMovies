@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BASE_URL } from 'src/app/controller/staticValues';
 
 @Component({
@@ -9,6 +9,7 @@ import { BASE_URL } from 'src/app/controller/staticValues';
 })
 export class CardMovieComponent implements OnInit {
 
+  @Input() id: number = 0;
   @Input() title: string = '';
   @Input() release_date: string = '';
   @Input() vote_average: number = 0;
@@ -16,7 +17,7 @@ export class CardMovieComponent implements OnInit {
   @Input() overview: string = '';
   @Input() genres: [];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
@@ -24,6 +25,10 @@ export class CardMovieComponent implements OnInit {
 
   get imgFigure() {
     return `http://image.tmdb.org/t/p/w342` + `${this.poster_path}`
+  }
+
+  detailMovie() {
+    this.router.navigate([`details-movie/${this.id}`]);
   }
 
 }

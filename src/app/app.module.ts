@@ -1,3 +1,6 @@
+import { PipesModule } from './pipes/pipes.module';
+import { VoteAverageModule } from './shared/components/vote-average/vote-average.module';
+import { DetailsMovieModule } from './pages/details-movie/details-movie.module';
 import { SearchService } from 'src/app/shared/components/search/search.service';
 import { SearchModule } from './shared/components/search/search.module';
 import { TopBarModule } from './shared/components/topbar/topbar.module';
@@ -25,7 +28,10 @@ import { GenresModule } from './shared/components/genres/genres.module';
     TopBarModule,
     HttpClientModule,
     GenresModule,
-    SearchModule
+    SearchModule,
+    DetailsMovieModule,
+    VoteAverageModule,
+    PipesModule
   ],
   providers: [SearchService],
   bootstrap: [AppComponent]

@@ -5,6 +5,7 @@
     </div>
     <ul>
       <app-card-movie *ngFor="let movie of moviesPaginate[index]"
+        [id]="movie.id"
         [title]="movie.title"
         [release_date]="movie.release_date"
         [vote_average]="movie.vote_average"

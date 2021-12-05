@@ -12,3 +12,14 @@ li {
   border-radius: 25px;
   border: 1.5px solid #116193;
 }
+
+@media only screen and (max-device-width: 544px) {
+  ul {
+    flex-direction: column;
+  }
+
+  li {
+    width: 30%;
+    margin-top: 15px;
+  }
+}

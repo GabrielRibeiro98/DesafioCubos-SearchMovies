@@ -20,7 +20,7 @@ export class GenresComponent implements OnInit {
       if (list.length != 0) {
         list.map(value => {
           this.listGenres.map((id, index) => {
-            if (id === value.id) {
+            if (id === value.id || id.id === value.id) {
               this.listGenresName[index] = { name: value.name }
             }
           })
