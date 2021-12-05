@@ -11,6 +11,7 @@ li {
   background: #ffffff;
   border-radius: 25px;
   border: 1.5px solid #116193;
+  text-align: center;
 }
 
 @media only screen and (max-device-width: 544px) {
@@ -19,7 +20,8 @@ li {
   }
 
   li {
-    width: 30%;
+    width: 40%;
     margin-top: 15px;
+    padding: 5px 20px;
   }
 }
